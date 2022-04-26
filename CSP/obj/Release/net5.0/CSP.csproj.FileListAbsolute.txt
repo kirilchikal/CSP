@@ -1,0 +1,16 @@
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\bin\Release\net5.0\CSP.exe
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\bin\Release\net5.0\CSP.deps.json
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\bin\Release\net5.0\CSP.runtimeconfig.json
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\bin\Release\net5.0\CSP.runtimeconfig.dev.json
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\bin\Release\net5.0\CSP.dll
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\bin\Release\net5.0\ref\CSP.dll
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\bin\Release\net5.0\CSP.pdb
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\obj\Release\net5.0\CSP.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\obj\Release\net5.0\CSP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\obj\Release\net5.0\CSP.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\obj\Release\net5.0\CSP.AssemblyInfo.cs
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\obj\Release\net5.0\CSP.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\obj\Release\net5.0\CSP.dll
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\obj\Release\net5.0\ref\CSP.dll
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\obj\Release\net5.0\CSP.pdb
+C:\Users\Asus\Desktop\ST\6sem\SIiIW\Etap2\CSP\CSP\obj\Release\net5.0\CSP.genruntimeconfig.cache
