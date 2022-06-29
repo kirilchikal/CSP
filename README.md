@@ -10,10 +10,10 @@ Implementing CSP with Forward Checking constraint propagation on the example of 
 ## Problems
 Below there are two problems for an example of how to use CSP algorytm
 1. ### [Binary puzzle](https://github.com/kirilchikal/CSP/blob/master/CSP/BinaryPuzzle.cs)
-  The objective is to fill the grid with 1s and 0s, where there is an equal number of 1s and 0s in each row and column and no more than two of either number adjacent to each other. Additionally, there can be no identical rows or columns.\
+  The objective is to fill the grid with 1s and 0s, where there is an equal number of 1s and 0s in each row and column and no more than two of either number adjacent to each other. Additionally, there can be no identical rows or columns.<br />
 [![image](https://user-images.githubusercontent.com/48454522/176374119-e5f6b8aa-deff-4582-9476-d575a8339780.png)
-](https://en.wikipedia.org/wiki/Takuzu#Solving_methods)\
-2. ### [Futoshiki puzzle](https://github.com/kirilchikal/CSP/blob/master/CSP/FutoshikiPuzzle.cs) 
+](https://en.wikipedia.org/wiki/Takuzu#Solving_methods)<br />
+2. **[Futoshiki puzzle](https://github.com/kirilchikal/CSP/blob/master/CSP/FutoshikiPuzzle.cs)**
   The puzzle is played on a square grid. The objective is to place the numbers such that each row and column contains only one of each digit. Some digits may be given at the start. Inequality constraints are initially specified between some of the squares, such that one must be higher or lower than its neighbor. These constraints must be honored in order to complete the puzzle.
   
 ## Chosen heuristics
@@ -24,7 +24,7 @@ Below there are two problems for an example of how to use CSP algorytm
 
 ## Forward cheking with constraint propagation is better than Backtrack algorithm
 Forward checking detects the inconsistency earlier than simple backtracking and thus it allows branches of the search tree that will lead to failure to be pruned earlier than with simple backtracking. This reduces the search tree and (hopefully) the overall amount of work done. Below you can see two graphs that compare both algorithms.
-This first graph shows dependence of the used algorithms on the time of finding the first / all solutions (on the example of Binary puzzle). The second graph represents the visited states dependence./
-<img src="https://user-images.githubusercontent.com/48454522/176381673-624f9777-82d2-49ce-88aa-4a50cbcc6303.png" width="50">
-<img src="https://user-images.githubusercontent.com/48454522/176382594-6a7d53bb-9ac3-48fc-950f-eeaccd666ad1.png" width="50">
+This first graph shows dependence of the used algorithms on the time of finding the first / all solutions (on the example of Binary puzzle). The second graph represents the visited states dependence<br />
+<img src="https://user-images.githubusercontent.com/48454522/176381673-624f9777-82d2-49ce-88aa-4a50cbcc6303.png" width="200">
+<img src="https://user-images.githubusercontent.com/48454522/176382594-6a7d53bb-9ac3-48fc-950f-eeaccd666ad1.png" width="200">
 
