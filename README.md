@@ -10,10 +10,10 @@ Implementing CSP with Forward Checking constraint propagation on the example of 
 ## Problems
 Below there are two problems for an example of how to use CSP algorytm
 1. ### [Binary puzzle](https://github.com/kirilchikal/CSP/blob/master/CSP/BinaryPuzzle.cs)
-  The objective is to fill the grid with 1s and 0s, where there is an equal number of 1s and 0s in each row and column and no more than two of either number adjacent to each other. Additionally, there can be no identical rows or columns.
+  The objective is to fill the grid with 1s and 0s, where there is an equal number of 1s and 0s in each row and column and no more than two of either number adjacent to each other. Additionally, there can be no identical rows or columns.\
 [![image](https://user-images.githubusercontent.com/48454522/176374119-e5f6b8aa-deff-4582-9476-d575a8339780.png)
-](https://en.wikipedia.org/wiki/Takuzu#Solving_methods)
-3. ### [Futoshiki puzzle](https://github.com/kirilchikal/CSP/blob/master/CSP/FutoshikiPuzzle.cs) 
+](https://en.wikipedia.org/wiki/Takuzu#Solving_methods)\
+2. ### [Futoshiki puzzle](https://github.com/kirilchikal/CSP/blob/master/CSP/FutoshikiPuzzle.cs) 
   The puzzle is played on a square grid. The objective is to place the numbers such that each row and column contains only one of each digit. Some digits may be given at the start. Inequality constraints are initially specified between some of the squares, such that one must be higher or lower than its neighbor. These constraints must be honored in order to complete the puzzle.
   
 ## Chosen heuristics
