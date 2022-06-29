@@ -24,7 +24,7 @@ Below there are two problems for an example of how to use CSP algorytm
 
 ## Forward cheking with constraint propagation is better than Backtrack algorithm
 Forward checking detects the inconsistency earlier than simple backtracking and thus it allows branches of the search tree that will lead to failure to be pruned earlier than with simple backtracking. This reduces the search tree and (hopefully) the overall amount of work done. Below you can see two graphs that compare both algorithms.
-This first graph shows dependence of the used algorithms on the time of finding the first / all solutions (on the example of Binary puzzle). The second graph represents the visited states dependence.
-![image](https://user-images.githubusercontent.com/48454522/176381673-624f9777-82d2-49ce-88aa-4a50cbcc6303.png)
-![image](https://user-images.githubusercontent.com/48454522/176382594-6a7d53bb-9ac3-48fc-950f-eeaccd666ad1.png)
+This first graph shows dependence of the used algorithms on the time of finding the first / all solutions (on the example of Binary puzzle). The second graph represents the visited states dependence./
+<img src="https://user-images.githubusercontent.com/48454522/176381673-624f9777-82d2-49ce-88aa-4a50cbcc6303.png" width="50">
+<img src="https://user-images.githubusercontent.com/48454522/176382594-6a7d53bb-9ac3-48fc-950f-eeaccd666ad1.png" width="50">
 
