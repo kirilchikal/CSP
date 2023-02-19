@@ -1,26 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSP
 {
     public class Model
     {
         public List<Variable> Variables = new List<Variable>();
-        public Domain Domain;
         public List<Constraint> Constraints = new List<Constraint>();
-        public string Futoshiki;
+        public string Futoshiki { get; set; }
+        private Domain _domain;
 
         public Model(List<int> domain)
         {
-            Domain = new Domain { Values = domain };
+            _domain = new Domain { Values = domain };
         }
 
         public void AddVariable()
         {
-            Variable variable = new Variable { Nr = Variables.Count, Domain = this.Domain.Copy()};
+            Variable variable = new Variable { Nr = Variables.Count, Domain = _domain.Copy() };
             Variables.Add(variable);
         }
 

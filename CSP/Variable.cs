@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CSP
+﻿namespace CSP
 {
     public class Variable
     {
-        public int Nr;
-        public int Value = -1;
-        public bool IsSet;
+        public int Nr { get; set; }
+        public int Value { get; set; } = -1;
+        public bool IsSet { get; set; }
         public Domain Domain { get; set; }
-        public Propagation Propagation;
+        public Propagation Propagation { get; set; }
 
         public void Set(int value)
         {
