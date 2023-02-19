@@ -5,6 +5,7 @@ namespace CSP
 {
     public class BinaryPuzzle : IProblem
     {
+        private const string BinaryFileData = "Data/binary_";
         private readonly int n;
 
         public BinaryPuzzle(int n)
@@ -21,7 +22,7 @@ namespace CSP
                 model.AddVariable();
             }
 
-            string data = System.IO.File.ReadAllText($"../../../Data/binary_{n}x{n}").Replace("\n", "").Replace("\r", "");
+            string data = System.IO.File.ReadAllText($"{BinaryFileData}{n}x{n}").Replace("\n", "").Replace("\r", "");
 
             for (int i = 0; i < n * n; i++)
             {
