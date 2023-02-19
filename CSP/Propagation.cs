@@ -1,33 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace CSP
 {
     public class Propagation
     {
-        public List<(Variable, int)> Eliminations;
+        private List<(Variable, int)> _eliminations;
 
         public Propagation()
         {
-            Eliminations = new  List<(Variable, int)>();
+            _eliminations = new List<(Variable, int)>();
         }
 
         public void AddElimination(Variable variable, int value)
         {
-            Eliminations.Add((variable, value));
+            _eliminations.Add((variable, value));
         }
 
         public void UndoEliminations()
         {
-            for (int i = 0; i < Eliminations.Count;i++)
+            for (int i = 0; i < _eliminations.Count; i++)
             {
-                (Variable variable, int value) = Eliminations[i];
+                (Variable variable, int value) = _eliminations[i];
                 variable.Domain.Values.Add(value);
             }
-            Eliminations = new List<(Variable, int)>();
+            _eliminations = new List<(Variable, int)>();
         }
     }
 }

@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using CSP.Interfaces;
 
 namespace CSP
 {
-    public class BinaryPuzzle
+    public class BinaryPuzzle : IProblem
     {
-        int n;
+        private const string BinaryFileData = "Data/binary_";
+        private readonly int n;
 
         public BinaryPuzzle(int n)
         {
@@ -17,16 +15,16 @@ namespace CSP
 
         public Model CreateModel()
         {
-            Model model = new Model(new List<int>{ 0, 1});
+            Model model = new Model(new List<int> { 0, 1 });
 
             for (int i = 0; i < n * n; i++)
             {
                 model.AddVariable();
             }
 
-            string data = System.IO.File.ReadAllText($"../../../Data/binary_{n}x{n}").Replace("\n", "").Replace("\r", "");
+            string data = System.IO.File.ReadAllText($"{BinaryFileData}{n}x{n}").Replace("\n", "").Replace("\r", "");
 
-            for (int i = 0; i < n*n; i++)
+            for (int i = 0; i < n * n; i++)
             {
                 if (data[i] != 'x')
                 {
@@ -42,7 +40,7 @@ namespace CSP
             {
                 Variable v1, v2, v3;
                 // Constraints for rows
-                for (int j = i * n; j < (i + 1) * n -2; j++)
+                for (int j = i * n; j < (i + 1) * n - 2; j++)
                 {
                     v1 = model.Variables[j];
                     v2 = model.Variables[j + 1];
@@ -54,7 +52,7 @@ namespace CSP
                 {
                     v1 = model.Variables[j];
                     v2 = model.Variables[j + n];
-                    v3 = model.Variables[j + 2*n];
+                    v3 = model.Variables[j + 2 * n];
                     model.Constraints.Add(new AllNotTheSameConstraint(v1, v2, v3));
                 }
             }
@@ -66,7 +64,7 @@ namespace CSP
             for (int i = 0; i < n; i++)
             {
                 Variable[] row = model.Variables.GetRange(i * n, n).ToArray();
-                
+
                 model.Constraints.Add(new SumEqualsConstraint(n / 2, row));
 
                 List<Variable> col = new List<Variable>();
@@ -76,8 +74,6 @@ namespace CSP
                 }
                 model.Constraints.Add(new SumEqualsConstraint(n / 2, col.ToArray()));
             }
-
-            
 
             return model;
         }
