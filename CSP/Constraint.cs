@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSP
 {
     public abstract class Constraint
     {
-        public List<Variable> Variables;
+        public List<Variable> Variables { get; set; }
         public abstract bool IsSatisfied();
         public abstract bool Propagate(Variable variable, Propagation propagation);
+
+        protected Constraint(params Variable[] variables)
+        {
+            Variables = variables.ToList();
+        }
         public bool IfAllSet()
         {
-            if (Variables.Find(v => v.IsSet == false) != null)
-            {
-                return false;
-            }
-            return true;
+            return !Variables.Exists(v => v.IsSet == false);
         }
 
         public bool ContainsVariable(Variable variable)
@@ -29,9 +28,8 @@ namespace CSP
 
     public class AllNotTheSameConstraint : Constraint
     {
-        public AllNotTheSameConstraint(params Variable[] variables)
+        public AllNotTheSameConstraint(params Variable[] variables) : base(variables)
         {
-            Variables = variables.ToList();
         }
         public override bool IsSatisfied()
         {
@@ -82,10 +80,9 @@ namespace CSP
     public class SumEqualsConstraint : Constraint
     {
         int Sum;
-        public SumEqualsConstraint(int sum, params Variable[] variables)
+        public SumEqualsConstraint(int sum, params Variable[] variables) : base(variables)
         {
             Sum = sum;
-            Variables = variables.ToList();
         }
         public override bool IsSatisfied()
         {
@@ -93,7 +90,7 @@ namespace CSP
                 return true;
 
             int sum = Variables.Sum(v => v.Value);
-            return this.Sum == sum;  
+            return this.Sum == sum;
         }
 
         public override bool Propagate(Variable variable, Propagation propagation)
@@ -143,7 +140,7 @@ namespace CSP
             {
                 List<int> row = Variables.GetRange(i * n, n).Select(v => v.Value).ToList();
                 List<int> col = new List<int>();
-                for (int j = i; j < n*n; j+=n)
+                for (int j = i; j < n * n; j += n)
                 {
                     col.Add(Variables[j].Value);
                 }
@@ -235,14 +232,13 @@ namespace CSP
 
     public class AllDifferrentConstraint : Constraint
     {
-        public AllDifferrentConstraint(params Variable[] variables)
+        public AllDifferrentConstraint(params Variable[] variables) : base(variables)
         {
-            Variables = variables.ToList();
         }
         public override bool IsSatisfied()
         {
             var values = new Dictionary<int, bool>();
-            foreach(var v in Variables)
+            foreach (var v in Variables)
             {
                 if (v.Value == -1)
                     continue;
