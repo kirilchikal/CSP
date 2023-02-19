@@ -3,7 +3,7 @@ using CSP.Interfaces;
 
 namespace CSP
 {
-    public class BinaryPuzzle : IProblem    //use test
+    public class BinaryPuzzle : IProblem
     {
         int n;
 
