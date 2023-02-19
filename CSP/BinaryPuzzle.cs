@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSP
 {
-    public class BinaryPuzzle
+    public class BinaryPuzzle   //use test
     {
         int n;
 
