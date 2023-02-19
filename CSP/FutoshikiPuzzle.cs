@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CSP.Interfaces;
 
 namespace CSP
 {
-    public class FutoshikiPuzzle
+    public class FutoshikiPuzzle : IProblem
     {
-        int n;
+        private const string FutoshikiFileData = "Data/futoshiki_";
+        private readonly int n;
 
         public FutoshikiPuzzle(int n)
         {
@@ -24,7 +24,7 @@ namespace CSP
                 model.AddVariable();
             }
 
-            string[] data = System.IO.File.ReadAllLines($"../../../Data/futoshiki_{n}x{n}");
+            string[] data = System.IO.File.ReadAllLines($"{FutoshikiFileData}{n}x{n}");
             string constraints = "";
 
             int x = 0;
@@ -71,7 +71,7 @@ namespace CSP
 
 
             //ADD CONSTRAINTS TO MODEL
-            
+
             for (int i = 0; i < n; i++)
             {
                 Variable[] row = model.Variables.GetRange(i * n, n).ToArray();
