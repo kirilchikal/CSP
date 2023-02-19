@@ -5,7 +5,7 @@ namespace CSP
 {
     public class BinaryPuzzle : IProblem
     {
-        int n;
+        private readonly int n;
 
         public BinaryPuzzle(int n)
         {
@@ -73,8 +73,6 @@ namespace CSP
                 }
                 model.Constraints.Add(new SumEqualsConstraint(n / 2, col.ToArray()));
             }
-
-
 
             return model;
         }
