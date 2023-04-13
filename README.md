@@ -5,16 +5,16 @@ Implementing CSP with Forward Checking constraint propagation on the example of 
 - Problem is defined by set of **[Variables](https://github.com/kirilchikal/CSP/blob/master/CSP/Variable.cs)** with their possible values 
 - Each **Variable** contains their own number and can be set to a value of *int* type
 - **[Model](https://github.com/kirilchikal/CSP/blob/master/CSP/Model.cs)** class is a problem representation (like Binary puzzle, Futoshiki etc.) that is defined as a set of Variables, **[Domain](https://github.com/kirilchikal/CSP/blob/master/CSP/Domain.cs)** and **[Constraints](https://github.com/kirilchikal/CSP/blob/master/CSP/Constraint.cs)** based on the solving problem
-- There is the implementation of both search algoritms: ***[Backtracking](https://github.com/kirilchikal/CSP/blob/382167e751a15a6668c1b20632f347e1c5e98af9/CSP/CSP.cs#L115)*** and ***[Forward chechikg](https://github.com/kirilchikal/CSP/blob/382167e751a15a6668c1b20632f347e1c5e98af9/CSP/CSP.cs#L46)***. [See below]() the comparison of using this methods
+- There is the implementation of both search algoritms: ***[Backtracking](https://github.com/kirilchikal/CSP/blob/382167e751a15a6668c1b20632f347e1c5e98af9/CSP/CSP.cs#L115)*** and ***[Forward chechikg](https://github.com/kirilchikal/CSP/blob/382167e751a15a6668c1b20632f347e1c5e98af9/CSP/CSP.cs#L46)***. [See below](https://github.com/kirilchikal/CSP#forward-cheking-with-constraint-propagation-is-better-than-backtrack-algorithm) the comparison of using this methods
 
 ## Problems
-Below there are two problems for an example of how to use CSP algorytm
+Below are two problems taken for an example to demonstrate the use of CSP algorithm
 ### 1. [Binary puzzle](https://github.com/kirilchikal/CSP/blob/master/CSP/BinaryPuzzle.cs)
   The objective is to fill the grid with 1s and 0s, where there is an equal number of 1s and 0s in each row and column and no more than two of either number adjacent to each other. Additionally, there can be no identical rows or columns.<br />
 [![image](https://user-images.githubusercontent.com/48454522/176374119-e5f6b8aa-deff-4582-9476-d575a8339780.png)
 ](https://en.wikipedia.org/wiki/Takuzu#Solving_methods)<br />
 ### 2. [Futoshiki puzzle](https://github.com/kirilchikal/CSP/blob/master/CSP/FutoshikiPuzzle.cs)**
-  The puzzle is played on a square grid. The objective is to place the numbers such that each row and column contains only one of each digit. Some digits may be given at the start. Inequality constraints are initially specified between some of the squares, such that one must be higher or lower than its neighbor. These constraints must be honored in order to complete the puzzle.
+  The puzzle is played on a square grid. The goal is to arrange the numbers so that each row and column contains only one of each digit. Some digits may be given at the start. Inequality constraints are initially specified between some of the squares, such that one must be higher or lower than its neighbor. These constraints must be honored in order to complete the puzzle.
   
 ## Chosen heuristics
 1. Variable-Selection Heuristics
